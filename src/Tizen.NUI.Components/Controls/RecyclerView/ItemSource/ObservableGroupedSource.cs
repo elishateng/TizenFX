@@ -402,7 +402,7 @@ namespace Tizen.NUI.Components
 
         void Move(NotifyCollectionChangedEventArgs args)
         {
-            var itemCount = CountItemsInGroups(args.OldStartingIndex, args.OldItems.Count);
+            var itemCount = CountItemsInGroups(args.OldStartingIndex, args.OldItems?.Count ?? 0);
             var start = Math.Min(args.OldStartingIndex, args.NewStartingIndex);
             var end = Math.Max(args.OldStartingIndex, args.NewStartingIndex) + itemCount;
 
